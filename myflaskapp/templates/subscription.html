@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+  <h1> Subscription </h1>
+
+  {% from "includes/_formHelpers.html" import render_field %}
+
+  <form method="POST" action="">
+
+    <div class="form-group">
+      {{ render_field(form.email, class_= "form-control" )}}
+    </div>
+
+    <div class="form-group">
+      {{ render_field(form.firstName, class_= "form-control") }}
+    </div>
+
+    <div class="form-group">
+      {{render_field(form.lastName, class_= "form-control")}}
+    </div>
+
+    <div class="form-group">
+     {{ form.action }}
+    </div>
+
+    <div>
+         <input class = "btn btn-primary" type="submit"  value="submit" >
+     </div>
+
+  </form>
+
+{% endblock %}

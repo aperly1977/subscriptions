@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+  <h1> Active subscription for
+  <script> document.write(new Date().toLocaleDateString()); </script>
+  </h1>
+  <hr>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Email</th>
+      <th>Start Subscription Date</th>
+      <th>End Subscription Date</th>
+    </tr>
+
+    {% for r in report %}
+    <tr>
+      <td>{{r.email}}</td>
+      <td>{{r.start_dubscription_date}}</td>
+      <td>{{r.end_dubscription_date}}</td>
+    </tr>
+    {% endfor%}
+
+    <tr>
+      <th>Total:</th>
+      <td>{{result}}<td>
+    </tr>
+  </table>
+
+{% endblock %}
