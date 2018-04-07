@@ -56,7 +56,7 @@ def subscription():
         except Exception as e:
             city ="N/A"
 
-
+        cur = mysql.connection.cursor()
         #execute query
         cur.execute("""insert into subscriptions(email,first_name,last_name,action,ip,country)
         values (%s,%s,%s,%s,%s,%s)""",(email,firstName,lastName,action,ip,country))
