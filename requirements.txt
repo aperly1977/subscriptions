@@ -1,3 +1,0 @@
-Flask-WTF
-flask-mysqldb
-geoip2
